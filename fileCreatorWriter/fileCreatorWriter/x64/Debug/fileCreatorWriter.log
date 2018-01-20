@@ -1,0 +1,3 @@
+﻿  fileCreatorWriter.cpp
+d:\users\sergei\documents\visualstudioprojects\c++\filecreatorwriter\filecreatorwriter\filecreatorwriter.cpp(7): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  fileCreatorWriter.vcxproj -> D:\Users\Sergei\Documents\VisualStudioProjects\C++\fileCreatorWriter\x64\Debug\fileCreatorWriter.exe
