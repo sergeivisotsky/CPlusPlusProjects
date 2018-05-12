@@ -29,9 +29,9 @@ namespace LinkedList
 
     class Node
     {
-        readonly int Data;
-        readonly Node Prev;
-        readonly Node Next;
+        int Data;
+        public Node Prev;
+        public Node Next;
 
         public Node(int data)
         {
@@ -39,14 +39,14 @@ namespace LinkedList
         }
     }
 
-    class Program : IList
+    class LinkedList : IList
     {
-        private readonly int Size = 0;
-        private readonly int MaxSize;
-        private readonly Node Head = null;
-        private readonly Node Tail = null;
+        private int Size = 0;
+        private int MaxSize;
+        private Node Head = null;
+        private Node Tail = null;
 
-        public Program(int maxSize)
+        public LinkedList(int maxSize)
         {
             MaxSize = maxSize;
         }
@@ -73,7 +73,18 @@ namespace LinkedList
 
         public void InsertFirst(int element)
         {
-            throw new NotImplementedException();
+            Node node = new Node(element);
+            if(IsEmpty())
+            {
+                Head = node;
+                Tail = Head;
+            } else
+            {
+                Head.Prev = node;
+                node.Next = Head;
+                Head = node;
+            }
+            Size++;
         }
 
         public void InsertLast(int element)
@@ -83,7 +94,7 @@ namespace LinkedList
 
         public bool IsEmpty()
         {
-            return Size == 0;
+            return Head == null;
         }
 
         public bool IsFull()
