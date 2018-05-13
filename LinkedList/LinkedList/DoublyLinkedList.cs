@@ -61,21 +61,21 @@ namespace LinkedList
 
             if ((Head.Next == null))
             {
-                Console.WriteLine(Head.Data);
+                Console.Write(Head.Data);
                 return;
             }
 
             Node node;
-            Console.WriteLine(Head.Data + "\t");
+            Console.Write(Head.Data + "\t");
             node = Head.Next;
 
             while (node.Next != null)
             {
-                Console.WriteLine(node.Data + "\t");
+                Console.Write(node.Data + "\t");
                 node = node.Next;
             }
 
-            Console.WriteLine(node.Data + "\t");
+            Console.Write(node.Data + "\t");
         }
 
         public int GetSize()
@@ -83,7 +83,7 @@ namespace LinkedList
             return Size;
         }
 
-        public void InsertAtPosition(int element, int position)
+        public void InsertAtPosition(int position, int element)
         {
             Node node = new Node(element);
             if (position == 1)
@@ -212,18 +212,12 @@ namespace LinkedList
 
         static void Main(string[] args)
         {
-            int answer;
-            String yesNoAnswer;
-            int element;
-            int position;
-
-            Console.Write("Input size: (max 15)");
-            int maxSize = Console.Read();
-            if(maxSize > 15)
-            {
-                Console.WriteLine("List size shouldn't be greater than 15!");
-            }
+            int maxSize = 15;
             DoublyLinkedList list = new DoublyLinkedList(maxSize);
+            list.InsertFirst(12);
+            list.InsertAtPosition(1, 34);
+            list.InsertLast(34);
+            list.Display();
         }
     }
 }
