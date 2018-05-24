@@ -212,7 +212,7 @@ namespace LinkedList
 
         static void Main(string[] args)
         {
-            int maxSize = 15;
+            int maxSize = int.Parse(Console.ReadLine());
             DoublyLinkedList list = new DoublyLinkedList(maxSize);
             list.InsertFirst(12);
             list.InsertAtPosition(1, 34);
