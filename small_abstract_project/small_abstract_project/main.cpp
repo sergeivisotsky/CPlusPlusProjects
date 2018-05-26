@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// Testing class
 class my_class {
 private:
 	list<int> new_list;
@@ -28,10 +29,11 @@ public:
 
 };
 
+// Working with template(generic) types
 template <typename T> class second_new_class {
 public:
 	T hello(T first_word, T second_word) {
-		cout << first_word + second_word << endl;
+		cout << first_word + " " + second_word << endl;
 
 		return 0;
 	}
