@@ -26,9 +26,17 @@ public:
 	}
 
 
-
-
 };
+
+template <typename T> class second_new_class {
+public:
+	T hello(T first_word, T second_word) {
+		cout << first_word + second_word << endl;
+
+		return 0;
+	}
+};
+
 
 int main() {
 	my_class* new_class = new my_class();
@@ -44,6 +52,10 @@ int main() {
 
 	cout << "Created list: ";
 	new_class->display_list();
+
+	second_new_class<string> s_n_class;
+	s_n_class.hello("Hello", "World");
+
 	delete new_class;
 	return 0;
 }
