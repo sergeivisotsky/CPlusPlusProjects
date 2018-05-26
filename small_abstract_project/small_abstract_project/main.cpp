@@ -24,6 +24,10 @@ public:
 		}
 		cout << "\n";
 	}
+
+
+
+
 };
 
 int main() {
@@ -40,5 +44,6 @@ int main() {
 
 	cout << "Created list: ";
 	new_class->display_list();
+	delete new_class;
 	return 0;
 }
