@@ -25,8 +25,6 @@ public:
 		}
 		cout << "\n";
 	}
-
-
 };
 
 // Working with template(generic) types
@@ -38,7 +36,6 @@ public:
 		return 0;
 	}
 };
-
 
 int main() {
 	my_class* new_class = new my_class();
