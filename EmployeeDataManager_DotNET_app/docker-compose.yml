@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  employeedatamanager_dotnet_app:
+    image: ${DOCKER_REGISTRY}employeedatamanagerdotnetapp
+    build:
+      context: .
+      dockerfile: EmployeeDataManager_DotNET_app\Dockerfile
