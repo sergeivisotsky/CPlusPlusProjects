@@ -50,13 +50,12 @@ int main() {
 		cin >> element;
 		new_class->list_creation(element);
 	}
-
 	cout << "Created list: ";
 	new_class->display_list();
 
 	second_new_class<string> string_concat;
 	cout << string_concat.concat_data("Hello", "World") << endl;
-	
+
 	second_new_class<int> digit_concat;
 	cout << digit_concat.concat_data(1, 2) << endl;
 
