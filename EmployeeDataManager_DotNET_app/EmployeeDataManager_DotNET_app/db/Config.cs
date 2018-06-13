@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace EmployeeDataManager_DotNET_app.db
 {
-    interface IStudentDao
+    class Config
     {
-        void AddRecord(Student student);
-        void DisplayData();
-        void DeleteData(long id);
+         
     }
 }

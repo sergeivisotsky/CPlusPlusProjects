@@ -20,5 +20,20 @@ namespace EmployeeDataManager_DotNET_app.db
         {
             throw new NotImplementedException();
         }
+
+        public Student FindById(long id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Student> FindByPosition(string position)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Student> RetrieveData()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
